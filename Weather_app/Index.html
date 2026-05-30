@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WeatherStyle.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Weather App</h1>
+        <input type="text" required placeholder="Напишите название города" minlength="3" id="city-input" class="city-input">
+        <button id="get-weather-btn" class="get-weather-btn">Узнать погоду</button>
+
+        <div class="history-container" id="history-container" style="display: none;">
+            <p class="history-title">Недавние поиски:</p>
+            <div id="history-list" class="history-list"></div>
+        </div>
+
+        <div class="weather-result" id="weather-result" style="display: none;">
+            <div id="loader" class="loader">
+            <p id="name-city"></p>
+            <img id="weather-icon" src="" alt="Иконка погоды" style="display: none;">
+            </div>
+            <p id="temperature"></p>
+            <p id="feels-like"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+        </div>
+    </div>
+
+    <dialog id="error-modal" class="error-modal">
+        <div class="modal-content">
+            <h2>Ошибка</h2>
+            <p id="error-message">Текст ошибки</p>
+            <button id="close-modal-btn">Закрыть</button>
+        </div>
+    </dialog>
+
+    <script src="WeatherApp.js"></script>
+</body>
+</html>
